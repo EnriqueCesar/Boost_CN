@@ -16,8 +16,8 @@
   <aside class="sidebar" id="sidebar">
     <div class="brand"><img src="./assets/boost-cn.png" alt=""><div><strong>BOOST CN</strong><span>Centro Norte</span></div></div>
     <nav aria-label="Navegación principal">
-      <button class="nav-btn active" data-view="inicio"><svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg><span>Inicio</span></button>
-      <button class="nav-btn" data-view="franja"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg><span>Desempeño por Franja</span></button>
+      <button class="nav-btn active" data-view="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg><span>Inicio</span></button>
+      <button class="nav-btn" data-view="franja"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg><span>Desempeño por Franja</span></button>
     </nav>
     <div class="sidebar-foot"><span id="syncStatus">Cargando datos…</span><small>PWA · GitHub Pages</small></div>
   </aside>
@@ -25,8 +25,13 @@
   <div class="main-wrap">
     <header class="topbar">
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Visión ejecutiva 360° de venta y ticket</p></div>
-      <div class="top-actions"><button id="clearAll" class="ghost">Limpiar filtros</button><button id="exportPdf" class="primary">Exportar PDF</button><button id="installBtn" class="ghost hidden">Instalar app</button></div>
+      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Venta, ticket y productividad en una sola vista</p></div>
+      <div class="top-actions">
+        <label class="global-metric"><span>Métrica visual</span><select id="globalMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label>
+        <button id="clearAll" class="ghost">Limpiar filtros</button>
+        <button id="exportPdf" class="primary">Exportar PDF</button>
+        <button id="installBtn" class="ghost hidden">Instalar app</button>
+      </div>
     </header>
 
     <main id="main" tabindex="-1">
@@ -36,21 +41,23 @@
 
       <section id="view-inicio" class="view active">
         <div class="kpi-grid executive" id="homeKpis"></div>
-        <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Tendencia semanal</h2><span>Venta $ por semana</span></div></div><div id="weeklyChart" class="chart"></div></article>
+        <div class="grid two">
           <article class="card"><div class="card-head"><div><h2>Ticket Real vs Ticket Ppto</h2><span>Comparativo monetario y cumplimiento</span></div></div><div id="ticketChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Productividad operativa</h2><span>IPLH e Item/ADT por semana</span></div></div><div id="productivityChart" class="chart"></div></article>
         </div>
-        <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Desempeño por Item</h2><span>Venta $ y participación del portafolio</span></div></div><div id="itemChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2>Comparativo por DayPart</h2><span>Venta $ por franja</span></div></div><div id="daypartChart" class="chart"></div></article>
+        <div class="grid two">
+          <article class="card"><div class="card-head"><div><h2 id="weeklyTitle">Tendencia semanal · $</h2><span id="weeklySubtitle">Venta calculada por semana</span></div></div><div id="weeklyChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2 id="itemTitle">Desempeño por Item · $</h2><span>Participación del portafolio</span></div></div><div id="itemChart" class="chart"></div></article>
         </div>
-        <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Venta por DM</h2><span>Contribución ejecutiva en pesos</span></div></div><div id="dmChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2>Venta por Tienda</h2><span>Top 10 en pesos</span></div></div><div id="storeChart" class="chart"></div></article>
+        <div class="grid three">
+          <article class="card"><div class="card-head"><div><h2 id="daypartTitle">Comparativo por DayPart · $</h2><span>Contribución por franja</span></div></div><div id="daypartChart" class="chart compact"></div></article>
+          <article class="card"><div class="card-head"><div><h2 id="dmTitle">Venta por DM · $</h2><span>Contribución ejecutiva</span></div></div><div id="dmChart" class="chart compact"></div></article>
+          <article class="card"><div class="card-head"><div><h2 id="storeTitle">Venta por Tienda · $</h2><span>Top 10 de la selección</span></div></div><div id="storeChart" class="chart compact"></div></article>
         </div>
+        <article class="card growth-card"><div class="card-head"><div><h2>Crecimiento y desempeño por Tienda</h2><span>Última semana seleccionada contra semana anterior</span></div><button class="ghost" id="exportGrowth">Exportar CSV</button></div><div class="table-wrap"><table><thead><tr><th>CeCo</th><th>Tienda</th><th>DM</th><th>Sem.</th><th class="num">Venta</th><th class="num">Unid.</th><th class="num">Ticket Real</th><th class="num">Ticket Ppto</th><th class="num">Cumpl.</th><th class="num">IPLH</th><th class="num">Item/ADT</th><th class="num">Δ Venta</th><th class="num">Δ Unid.</th><th class="num">Δ IPLH</th><th class="num">Δ Item/ADT</th></tr></thead><tbody id="growthTable"></tbody></table></div></article>
         <div class="grid two rankings">
           <article class="card"><div class="card-head"><h2>Top 10 tiendas</h2><span>Mayor contribución</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Part.</th><th class="num">Tendencia</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
-          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2><span>Oportunidad de crecimiento</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Part.</th><th class="num">Tendencia</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
+          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2><span>Bloque de menor desempeño, orden descendente</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Part.</th><th class="num">Tendencia</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
         </div>
       </section>
 

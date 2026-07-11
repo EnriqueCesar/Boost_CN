@@ -1,19 +1,13 @@
 {
   "name": "BOOST CN",
   "short_name": "BOOST CN",
-  "description": "Dashboard ejecutivo de ventas, ticket y calidad de datos de Centro Norte",
+  "description": "Dashboard ejecutivo de venta, ticket y productividad de Centro Norte",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f7f6",
   "theme_color": "#006241",
-  "lang": "es-MX",
   "icons": [
-    {
-      "src": "./assets/boost-cn.png",
-      "sizes": "1254x1254",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    {"src":"./assets/boost-cn.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
   ]
 }

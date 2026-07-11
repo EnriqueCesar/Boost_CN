@@ -1,14 +1,28 @@
 {
-  "Base_Boost_CN": {
-    "rowsIncludingHeader": 15427,
-    "dataRows": 15426,
-    "valid": 15426,
-    "discarded": 0
-  },
-  "Base_AT": {
-    "rowsIncludingHeader": 25,
-    "dataRows": 24
-  },
-  "duplicatesDetected": 0,
-  "exceptions": 0
+  "version": "5.0.0",
+  "sourceFile": "Boost_CN.xlsx",
+  "generatedAt": "2026-07-11T08:09:33",
+  "chunks": [
+    "records-001.json",
+    "records-002.json",
+    "records-003.json",
+    "records-004.json"
+  ],
+  "sourceRowsIncludingHeader": 15427,
+  "dataRows": 15426,
+  "loadedRows": 15426,
+  "validRows": 15426,
+  "discardedRows": 0,
+  "baseATRowsIncludingHeader": 289,
+  "baseATDataRows": 288,
+  "itemADTRowsIncludingHeader": 217,
+  "itemADTDataRows": 216,
+  "instructionRowsIncludingHeader": 12,
+  "exceptionCount": 2,
+  "atDuplicateKeys": 0,
+  "itemADTDuplicateKeys": 0,
+  "totals": {
+    "units": 35520.0,
+    "sales": 1397484.0
+  }
 }

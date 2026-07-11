@@ -1,4 +1,7 @@
 {
+  "version": "5.0.0",
+  "sourceFile": "Boost_CN.xlsx",
+  "generatedAt": "2026-07-11T08:09:33",
   "chunks": [
     "records-001.json",
     "records-002.json",
@@ -7,10 +10,19 @@
   ],
   "sourceRowsIncludingHeader": 15427,
   "dataRows": 15426,
-  "recordsStored": 15426,
-  "validDashboardRows": 15426,
-  "baseATRowsIncludingHeader": 25,
-  "baseATDataRows": 24,
-  "duplicatesDetected": 0,
-  "generatedAt": "2026-07-11T07:09:36"
+  "loadedRows": 15426,
+  "validRows": 15426,
+  "discardedRows": 0,
+  "baseATRowsIncludingHeader": 289,
+  "baseATDataRows": 288,
+  "itemADTRowsIncludingHeader": 217,
+  "itemADTDataRows": 216,
+  "instructionRowsIncludingHeader": 12,
+  "exceptionCount": 2,
+  "atDuplicateKeys": 0,
+  "itemADTDuplicateKeys": 0,
+  "totals": {
+    "units": 35520.0,
+    "sales": 1397484.0
+  }
 }

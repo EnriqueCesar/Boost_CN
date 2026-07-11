@@ -1,0 +1,44 @@
+BOOST CN v5 - AUDITORIA TECNICA
+Fecha: 11/07/2026
+
+LECTURA DEL EXCEL
+- Instruccion: 12 filas físicas, 11 registros de datos.
+- Base_Boost_CN: 15,427 filas físicas, 15,426 registros de datos.
+- Base_Boost_CN cargados: 15,426.
+- Base_Boost_CN válidos: 15,426.
+- Base_Boost_CN descartados: 0.
+- Base_AT: 289 filas físicas, 288 registros de datos.
+- Item_ADT: 217 filas físicas, 216 registros de datos.
+
+ENCABEZADOS
+- Base_Boost_CN: Region, DM, Año, Semana, Dia, DayPart, CeCo, Tienda, Categoria, #Producto, Producto, Unidad Vendida, Item, Precio Venta.
+- Base_AT: División, DM, Año, Semana, Ceco, Tienda, Ticket Real, Ticket Ppto.
+- Item_ADT: CeCo, Tienda, Semana, DM, IPLH, item/ADT.
+
+VALIDACIONES
+- Lectura por nombre de pestaña y encabezado: OK.
+- Venta = Unidad Vendida x Precio Venta: OK.
+- Total unidades: 35,520.
+- Total venta: $1,397,484.00.
+- Duplicados Base_AT por DM+Año+Semana+CeCo: 0.
+- Duplicados Item_ADT por CeCo+Semana+DM: 0.
+- Cruce de Ticket sin multiplicación por filas de venta: OK.
+- Cruce de IPLH e Item/ADT sin multiplicación por filas de venta: OK.
+- IPLH e Item/ADT conservan precisión interna y muestran un decimal: OK.
+- Selector $ / Unidades aplicado a cinco gráficas: OK.
+- Escalas calculadas con mínimo y máximo filtrado: OK.
+- Bottom ordenado de mayor a menor dentro del bloque: OK.
+- Manifest JSON válido: OK.
+- Service Worker con rutas relativas: OK.
+- Archivos mayores a 20 MB: 0.
+
+ADVERTENCIAS DE FUENTE
+- Base_AT fila 213: Ticket Ppto vacío para CeCo 38401, DM Enrique César Flores, semana 25.
+- Base_AT fila 223: Ticket Ppto vacío para CeCo 38401, DM Enrique César Flores, semana 26.
+- Estos registros se conservan en el JSON técnico, se marcan como inválidos para cálculos de Ticket y no afectan las ventas.
+
+COMPATIBILIDAD
+- Aplicación estática.
+- Rutas relativas para GitHub Pages.
+- PWA mediante manifest.json y service-worker.js.
+- Responsive para escritorio, tablet y móvil.
