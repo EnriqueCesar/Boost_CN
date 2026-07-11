@@ -1,6 +1,10 @@
 {
   "chunks": [
-    "records-001.json"
+    "records-001.json",
+    "records-002.json",
+    "records-003.json",
+    "records-004.json"
   ],
-  "count": 662
+  "records": 12273,
+  "sourceRowsIncludingHeader": 15427
 }

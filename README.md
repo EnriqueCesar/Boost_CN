@@ -1,28 +1,33 @@
-# BOOST CN
+# BOOST CN v3 · Slicers + Ticket Promedio
 
-Dashboard ejecutivo estático y PWA para GitHub Pages, generado exclusivamente desde `Boost_CN.xlsx`.
-
-## Módulos
-
-- Inicio: KPIs, rankings, tendencia semanal y venta por Nombre Dash.
-- Desempeño por Franja: filtros múltiples, filtros dependientes, gráfica y tabla cruzada.
-- Control de Datos: calidad, excepciones, duplicados, conciliación y exportación CSV.
+Dashboard estático y PWA listo para GitHub Pages.
 
 ## Datos procesados
 
-- Registros fuente: 662
-- Registros válidos para dashboard: 662
-- Registros con error crítico: 0
-- Calidad de datos: 100.0%
-- Archivos de datos: records-001.json
+- `Base_Boost_CN`: 15,427 filas de hoja, incluyendo encabezado; 15,426 registros de datos leídos completos.
+- Lectura por nombre de pestaña y encabezado.
+- `Condicion`: cruce exacto por `Producto`.
+- `Base_AT`: Ticket Real, Ticket Presupuesto, Diferencia, Cumplimiento y Ticket Promedio.
+- Gráficas de ticket desde la semana 28.
+- JSON dividido en chunks dentro de `data/`.
 
-Los encabezados se leen por nombre. La relación usada es `Base_Boost_CN[Producto] = Condicion[Producto]`. Los duplicados exactos y errores críticos se excluyen del dashboard, pero permanecen visibles en Control de Datos.
+## Publicación en GitHub Pages
 
-## Publicar en GitHub Pages
+1. Subir el contenido de esta carpeta a la raíz del repositorio.
+2. Abrir **Settings → Pages**.
+3. Seleccionar **Deploy from a branch**.
+4. Elegir la rama principal y la carpeta `/ (root)`.
+5. Guardar.
 
-1. Crear un repositorio y subir todo el contenido de esta carpeta a la rama `main`.
-2. En **Settings → Pages**, elegir **Deploy from a branch**.
-3. Seleccionar `main` y la carpeta `/ (root)`.
-4. Guardar y abrir la URL publicada.
+Las rutas son relativas y `.nojekyll` está incluido.
 
-No requiere servidor, compilación ni dependencias externas.
+## Actualización de datos
+
+El Excel fuente se conserva en `data/Boost_CN.xlsx`. Al regenerar los JSON deben mantenerse los nombres de pestaña y encabezados; no se usan posiciones fijas de columna.
+
+## Módulos
+
+- Inicio ejecutivo.
+- Desempeño por Franja.
+- Validaciones de datos conservadas internamente y accesibles mediante **Ver incidencias**.
+- Exportación CSV y PDF horizontal mediante impresión del navegador.

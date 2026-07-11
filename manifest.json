@@ -1,7 +1,7 @@
 {
   "name": "BOOST CN",
   "short_name": "BOOST CN",
-  "description": "Dashboard ejecutivo de ventas, franjas y calidad de datos de Centro Norte.",
+  "description": "Dashboard ejecutivo de ventas, ticket y calidad de datos de Centro Norte",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -11,7 +11,7 @@
   "icons": [
     {
       "src": "./assets/boost-cn.png",
-      "sizes": "2048x2048",
+      "sizes": "1254x1254",
       "type": "image/png",
       "purpose": "any maskable"
     }
