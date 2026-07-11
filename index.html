@@ -21,42 +21,43 @@
     </nav>
     <div class="sidebar-foot"><span id="syncStatus">Cargando datos…</span><small>PWA · GitHub Pages</small></div>
   </aside>
+
   <div class="main-wrap">
     <header class="topbar">
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Resumen ejecutivo de venta y ticket</p></div>
+      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Visión ejecutiva 360° de venta y ticket</p></div>
       <div class="top-actions"><button id="clearAll" class="ghost">Limpiar filtros</button><button id="exportPdf" class="primary">Exportar PDF</button><button id="installBtn" class="ghost hidden">Instalar app</button></div>
     </header>
-    <main id="main" tabindex="-1"><div id="printMeta" class="print-only"></div>
+
+    <main id="main" tabindex="-1">
+      <div id="printMeta" class="print-only"></div>
       <section class="active-filters" id="activeFilters" aria-live="polite"></section>
       <section class="filter-card" id="slicerHost" aria-label="Filtros del dashboard"></section>
 
       <section id="view-inicio" class="view active">
         <div class="kpi-grid executive" id="homeKpis"></div>
         <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Tendencia semanal</h2><span>Venta calculada</span></div></div><div id="weeklyChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2>Ticket desde semana 28</h2><span>Real vs presupuesto</span></div></div><div id="ticketChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Tendencia semanal</h2><span>Evolución de desempeño</span></div><label class="metric-toggle">Métrica<select id="weeklyMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="weeklyChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Ticket y volumen</h2><span>Base_AT desde semana 28</span></div><label class="metric-toggle">Métrica<select id="ticketMetric"><option value="ticket">$</option><option value="units">Unidades</option></select></label></div><div id="ticketChart" class="chart"></div></article>
         </div>
-        <div class="grid two">
-          <article class="card"><div class="card-head"><div><h2>Venta por Nombre Dash</h2><span>Participación por artículo</span></div></div><div id="productChart" class="chart"></div></article>
-          <article class="card quality-card"><div class="card-head"><div><h2>Calidad de datos</h2><span id="qualityState"></span></div><button class="link-btn" id="openIncidents">Ver incidencias</button></div><div id="qualitySummary" class="quality-summary"></div></article>
+        <div class="grid two charts-row">
+          <article class="card"><div class="card-head"><div><h2>Desempeño por Item</h2><span>Participación del portafolio</span></div><label class="metric-toggle">Métrica<select id="itemMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="itemChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Comparativo por DayPart</h2><span>Concentración de resultados</span></div><label class="metric-toggle">Métrica<select id="daypartMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="daypartChart" class="chart"></div></article>
         </div>
         <div class="grid two rankings">
-          <article class="card"><div class="card-head"><h2>Top 10 tiendas</h2></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
-          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
+          <article class="card"><div class="card-head"><h2>Top 10 tiendas</h2><span>Mayor contribución</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Unidades</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
+          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2><span>Oportunidad de crecimiento</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Unidades</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
         </div>
       </section>
 
       <section id="view-franja" class="view">
         <div class="kpi-grid" id="bandKpis"></div>
-        <article class="card"><div class="card-head"><div><h2>Desempeño por DayPart</h2><span>Serie por Nombre Dash</span></div><label class="metric-switch">Métrica<select id="metricSelect"><option value="UnidadVendida">Unidades vendidas</option><option value="VentaCalculada">Venta calculada</option><option value="TicketPromedio">Ticket promedio</option></select></label></div><div id="bandChart" class="chart tall"></div></article>
+        <article class="card"><div class="card-head"><div><h2>Desempeño por DayPart</h2><span>Serie por Item</span></div><label class="metric-toggle">Métrica<select id="bandMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="bandChart" class="chart tall"></div></article>
         <article class="card"><div class="card-head"><div><h2>Tabla cruzada</h2><span>DM · Tienda · CeCo</span></div><button class="ghost" id="exportPivot">Exportar CSV</button></div><div class="table-wrap"><table id="pivotTable"></table></div></article>
       </section>
     </main>
   </div>
 </div>
-
-<dialog id="incidentDialog" class="modal"><div class="modal-head"><div><h2>Incidencias de datos</h2><p>Detalle interno de validaciones</p></div><button id="closeIncidents" aria-label="Cerrar">×</button></div><div class="modal-tools"><select id="incidentType"></select><button class="ghost" id="exportErrors">Exportar detalle</button></div><div class="table-wrap modal-table"><table><thead><tr><th>Tipo</th><th>Fila</th><th>DM</th><th>Semana</th><th>Día</th><th>DayPart</th><th>CeCo</th><th>Tienda</th><th>Producto</th><th>Descripción</th></tr></thead><tbody id="incidentRows"></tbody></table></div><div class="pager" id="incidentPager"></div></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="./js/app.js"></script>
 </body>

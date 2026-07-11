@@ -1,22 +1,16 @@
 {
-  "sheetRowsIncludingHeader": 15427,
-  "totalRecords": 15426,
-  "validRecords": 12273,
-  "criticalErrorRecords": 3153,
-  "warningRecords": 0,
-  "errorRecords": 3153,
-  "qualityPercent": 79.5605,
-  "exceptionCounts": {
-    "Producto sin relación": 3153
+  "sheetCountsIncludingHeader": {
+    "Base_Boost_CN": 15427,
+    "Condicion": 20,
+    "Base_AT": 25,
+    "Instruccion": 12
   },
-  "validUnits": 28243.0,
-  "validSales": 1113681.0,
-  "sourceSheets": [
-    "Base_Boost_CN",
-    "Condicion",
-    "Base_AT",
-    "Instruccion"
-  ],
+  "dataRowCounts": {
+    "Base_Boost_CN": 15426,
+    "Condicion": 19,
+    "Base_AT": 24,
+    "Instruccion": 11
+  },
   "baseHeaders": [
     "Region",
     "DM",
@@ -44,7 +38,19 @@
     "Ticket Real",
     "Ticket Ppto"
   ],
-  "generatedAt": "2026-07-11T05:59:07",
+  "instructionHeaders": [
+    "Pestaña",
+    "Encabezado",
+    "Instrucción "
+  ],
+  "totalRecords": 15426,
+  "validRecords": 15426,
+  "invalidRecords": 0,
+  "exceptions": 0,
+  "unmatchedProducts": 0,
+  "validUnits": 35520.0,
+  "validSales": 1397484.0,
   "week28Available": true,
-  "atRecords": 24
+  "atRecords": 24,
+  "generatedAt": "2026-07-11T06:23:07"
 }

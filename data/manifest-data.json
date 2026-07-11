@@ -5,6 +5,9 @@
     "records-003.json",
     "records-004.json"
   ],
-  "records": 12273,
-  "sourceRowsIncludingHeader": 15427
+  "sourceRowsIncludingHeader": 15427,
+  "dataRows": 15426,
+  "recordsStored": 15426,
+  "validDashboardRows": 15426,
+  "generatedAt": "2026-07-11T06:23:07"
 }
