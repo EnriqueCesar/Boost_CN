@@ -1,56 +1,14 @@
 {
-  "sheetCountsIncludingHeader": {
-    "Base_Boost_CN": 15427,
-    "Condicion": 20,
-    "Base_AT": 25,
-    "Instruccion": 12
+  "Base_Boost_CN": {
+    "rowsIncludingHeader": 15427,
+    "dataRows": 15426,
+    "valid": 15426,
+    "discarded": 0
   },
-  "dataRowCounts": {
-    "Base_Boost_CN": 15426,
-    "Condicion": 19,
-    "Base_AT": 24,
-    "Instruccion": 11
+  "Base_AT": {
+    "rowsIncludingHeader": 25,
+    "dataRows": 24
   },
-  "baseHeaders": [
-    "Region",
-    "DM",
-    "Año",
-    "Semana",
-    "Dia",
-    "DayPart",
-    "CeCo",
-    "Tienda",
-    "Categoria",
-    "#Producto",
-    "Producto",
-    "Unidad Vendida"
-  ],
-  "conditionHeaders": [
-    "Producto",
-    "Nombre Dash",
-    "Precio Venta"
-  ],
-  "baseATHeaders": [
-    "División",
-    "DM",
-    "Año",
-    "Semana",
-    "Ticket Real",
-    "Ticket Ppto"
-  ],
-  "instructionHeaders": [
-    "Pestaña",
-    "Encabezado",
-    "Instrucción "
-  ],
-  "totalRecords": 15426,
-  "validRecords": 15426,
-  "invalidRecords": 0,
-  "exceptions": 0,
-  "unmatchedProducts": 0,
-  "validUnits": 35520.0,
-  "validSales": 1397484.0,
-  "week28Available": true,
-  "atRecords": 24,
-  "generatedAt": "2026-07-11T06:23:07"
+  "duplicatesDetected": 0,
+  "exceptions": 0
 }

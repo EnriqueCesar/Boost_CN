@@ -9,5 +9,8 @@
   "dataRows": 15426,
   "recordsStored": 15426,
   "validDashboardRows": 15426,
-  "generatedAt": "2026-07-11T06:23:07"
+  "baseATRowsIncludingHeader": 25,
+  "baseATDataRows": 24,
+  "duplicatesDetected": 0,
+  "generatedAt": "2026-07-11T07:09:36"
 }

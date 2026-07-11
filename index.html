@@ -37,16 +37,20 @@
       <section id="view-inicio" class="view active">
         <div class="kpi-grid executive" id="homeKpis"></div>
         <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Tendencia semanal</h2><span>Evolución de desempeño</span></div><label class="metric-toggle">Métrica<select id="weeklyMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="weeklyChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2>Ticket y volumen</h2><span>Base_AT desde semana 28</span></div><label class="metric-toggle">Métrica<select id="ticketMetric"><option value="ticket">$</option><option value="units">Unidades</option></select></label></div><div id="ticketChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Tendencia semanal</h2><span>Venta $ por semana</span></div></div><div id="weeklyChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Ticket Real vs Ticket Ppto</h2><span>Comparativo monetario y cumplimiento</span></div></div><div id="ticketChart" class="chart"></div></article>
         </div>
         <div class="grid two charts-row">
-          <article class="card"><div class="card-head"><div><h2>Desempeño por Item</h2><span>Participación del portafolio</span></div><label class="metric-toggle">Métrica<select id="itemMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="itemChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2>Comparativo por DayPart</h2><span>Concentración de resultados</span></div><label class="metric-toggle">Métrica<select id="daypartMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="daypartChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Desempeño por Item</h2><span>Venta $ y participación del portafolio</span></div></div><div id="itemChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Comparativo por DayPart</h2><span>Venta $ por franja</span></div></div><div id="daypartChart" class="chart"></div></article>
+        </div>
+        <div class="grid two charts-row">
+          <article class="card"><div class="card-head"><div><h2>Venta por DM</h2><span>Contribución ejecutiva en pesos</span></div></div><div id="dmChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Venta por Tienda</h2><span>Top 10 en pesos</span></div></div><div id="storeChart" class="chart"></div></article>
         </div>
         <div class="grid two rankings">
-          <article class="card"><div class="card-head"><h2>Top 10 tiendas</h2><span>Mayor contribución</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Unidades</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
-          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2><span>Oportunidad de crecimiento</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Unidades</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
+          <article class="card"><div class="card-head"><h2>Top 10 tiendas</h2><span>Mayor contribución</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Part.</th><th class="num">Tendencia</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
+          <article class="card"><div class="card-head"><h2>Bottom 10 tiendas</h2><span>Oportunidad de crecimiento</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th>Tienda</th><th>DM</th><th class="num">Venta</th><th class="num">Part.</th><th class="num">Tendencia</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
         </div>
       </section>
 

@@ -1,24 +1,30 @@
-# BOOST CN — Dashboard ejecutivo
+# BOOST CN · Experiencia 360° Ticket AT
 
-Aplicación estática y PWA compatible con GitHub Pages.
+Dashboard ejecutivo estático y PWA compatible con GitHub Pages.
 
-## Datos procesados
+## Fuente procesada
 
-- `Base_Boost_CN`: 15,427 filas físicas incluyendo encabezado; 15,426 registros de datos.
-- `Condicion`: lectura completa por encabezado.
-- `Base_AT`: lectura completa por encabezado.
-- `Instruccion`: lectura completa.
-- Cruce exacto `Producto → Item` y cálculo `Venta = Unidad Vendida × Precio Venta`.
-- JSON dividido en chunks dentro de `data/`.
+- `Base_Boost_CN`: 15,427 filas incluyendo encabezado; 15,426 registros de datos.
+- `Base_AT`: 25 filas incluyendo encabezado; 24 registros de datos.
+- `Instruccion`: leída durante la auditoría.
+- `Item` y `Precio Venta` se toman directamente de `Base_Boost_CN`.
+- `Venta = Unidad Vendida × Precio Venta`.
+- Base_AT se relaciona por DM normalizado + Año + Semana, sin multiplicar tickets por filas de venta.
+
+## Funcionalidad
+
+- Filtros: Región, DM, Semana, Día, DayPart, Tienda e Item.
+- Inicio ejecutivo 360° con KPIs, Ticket Real vs Ticket Ppto, cumplimiento, venta por Item, DayPart, semana, DM y tienda.
+- Rankings Top y Bottom ordenados de mayor a menor dentro de cada bloque.
+- Desempeño por Franja y exportación CSV.
+- Exportación horizontal mediante impresión del navegador.
+- PWA con rutas relativas y Service Worker.
 
 ## Publicación en GitHub Pages
 
-1. Subir todo el contenido del proyecto a la raíz del repositorio.
-2. Abrir **Settings → Pages**.
-3. Seleccionar **Deploy from a branch**.
-4. Elegir la rama `main` y la carpeta `/root`.
-5. Guardar y abrir la URL publicada.
+1. Subir el contenido de esta carpeta a la raíz del repositorio.
+2. En **Settings → Pages**, seleccionar **Deploy from a branch**.
+3. Elegir la rama principal y la carpeta `/root`.
+4. Abrir la URL publicada y recargar una vez para activar la PWA.
 
-## Actualización de datos
-
-Regenerar los JSON desde `Boost_CN.xlsx` leyendo las pestañas y encabezados por nombre. No cambiar las rutas relativas de `data/manifest-data.json` ni de sus chunks.
+No requiere servidor, compilación ni dependencias externas.
