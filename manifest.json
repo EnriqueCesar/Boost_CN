@@ -1,0 +1,19 @@
+{
+  "name": "BOOST CN",
+  "short_name": "BOOST CN",
+  "description": "Dashboard ejecutivo de ventas, franjas y calidad de datos de Centro Norte.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f6",
+  "theme_color": "#006241",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./assets/boost-cn.png",
+      "sizes": "2048x2048",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
