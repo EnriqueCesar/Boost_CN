@@ -4,3 +4,24 @@
 @media(max-width:680px){.sidebar{transform:translateX(-100%);transition:.2s}.sidebar.open{transform:none}.main-wrap{margin-left:0}.menu-toggle{display:block}.topbar{padding:12px 14px;flex-wrap:wrap}.page-copy{min-width:0;flex:1}.page-copy p{display:none}.top-actions{max-width:none;width:100%;justify-content:flex-start}.top-actions .primary,.top-actions .ghost{flex:1}.global-metric{width:100%;justify-content:space-between}.global-metric select{flex:1}.filter-card{grid-template-columns:1fr}.slicer-panel{position:fixed;left:12px;right:12px;top:120px;width:auto;max-width:none}main{padding:14px}.kpi-grid,.kpi-grid.executive{grid-template-columns:1fr 1fr}.kpi{min-height:96px;padding:13px}.kpi .value{font-size:19px}.chart{min-height:250px;padding:6px}.card-head{padding:12px}.active-filters{overflow-x:auto;flex-wrap:nowrap}.filter-chip{flex:none}}
 @media(max-width:430px){.kpi-grid,.kpi-grid.executive{grid-template-columns:1fr}.top-actions{display:grid;grid-template-columns:1fr 1fr}.global-metric{grid-column:1/-1}.page-copy h1{font-size:20px}}
 @page{size:A4 landscape;margin:7mm}@media print{body{background:#fff;font-size:9px}.sidebar,.topbar,.filter-card,.active-filters,#toast,.card-head button,.metric-toggle{display:none!important}.main-wrap{margin:0}main{padding:0}.print-only{display:block!important;margin-bottom:4mm}.print-only h1{margin:0;font-size:14pt}.print-only p{margin:2mm 0 0;color:#555}.view{display:none!important}.view.print-target{display:block!important;zoom:.55}.kpi-grid,.kpi-grid.executive{grid-template-columns:repeat(6,1fr);gap:5px;margin-bottom:5px}.kpi{min-height:68px;padding:7px;border-radius:8px}.kpi .value{font-size:15px}.grid,.grid.two,.grid.three{grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:5px}.grid.two:first-of-type{grid-template-columns:1.5fr 1fr}.card{break-inside:avoid;border-radius:8px}.card-head{min-height:34px;padding:5px 7px}.card-head h2{font-size:10px}.card-head span{font-size:8px}.chart,.chart.compact,.chart.tall{min-height:125px;height:125px;padding:2px}.chart svg{max-height:122px}.growth-card .table-wrap{max-height:none}.growth-card table tbody tr:nth-child(n+9){display:none}.rankings .table-wrap{max-height:none}th,td{padding:3px 4px;font-size:7px}.rankings{grid-template-columns:1fr 1fr!important}.rankings tbody tr:nth-child(n+7){display:none}.growth-card{margin-bottom:5px}.growth-card .card-head{display:flex!important}}
+
+/* v6 · refinamiento ejecutivo */
+.kpi-grid.executive.home-four{grid-template-columns:repeat(4,minmax(190px,1fr));gap:16px;margin-bottom:18px}
+.home-four .kpi{min-height:132px;padding:20px}
+.home-four .kpi .label{font-size:13px;font-weight:600;color:#53625c}
+.home-four .kpi .value{font-size:30px;color:#17251f}
+.dm-card{margin-bottom:14px}
+.dm-chart{min-height:340px}
+.rank-badge{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 7px;border-radius:999px;background:#e7f3ee;color:#004c3f;font-weight:700}
+.rankings tbody tr:hover{background:#f4f8f6}
+.rankings td{padding-top:12px;padding-bottom:12px}
+#productivityMetric{min-width:110px}
+@media(max-width:1100px){.kpi-grid.executive.home-four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.kpi-grid.executive.home-four{grid-template-columns:1fr}.home-four .kpi{min-height:110px}.home-four .kpi .value{font-size:25px}}
+@media print{
+  .home-four{grid-template-columns:repeat(4,1fr)!important}
+  .home-four .kpi{min-height:62px;padding:7px}
+  .home-four .kpi .value{font-size:14px}
+  .dm-card{margin-bottom:5px}
+  .rankings tbody tr:nth-child(n+8){display:none}
+}

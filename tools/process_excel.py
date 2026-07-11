@@ -175,7 +175,7 @@ with open(os.path.join(DATA,'item-adt.json'),'w',encoding='utf-8') as f:json.dum
 with open(os.path.join(DATA,'instructions.json'),'w',encoding='utf-8') as f:json.dump(instr,f,ensure_ascii=False,separators=(',',':'))
 with open(os.path.join(DATA,'exceptions.json'),'w',encoding='utf-8') as f:json.dump(exceptions,f,ensure_ascii=False,separators=(',',':'))
 manifest={
- 'version':'5.0.0','sourceFile':'Boost_CN.xlsx','generatedAt':datetime.now().isoformat(timespec='seconds'),
+ 'version':'6.0.0','sourceFile':'Boost_CN.xlsx','generatedAt':datetime.now().isoformat(timespec='seconds'),
  'chunks':chunks,'sourceRowsIncludingHeader':len(sheets['Base_Boost_CN']),'dataRows':len(base),'loadedRows':len(valid),
  'validRows':sum(1 for r in valid if r['Valid']),'discardedRows':sum(1 for r in valid if not r['Valid']),
  'baseATRowsIncludingHeader':len(sheets['Base_AT']),'baseATDataRows':len(at_out),
