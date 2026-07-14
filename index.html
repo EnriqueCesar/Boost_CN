@@ -43,12 +43,12 @@
         <div class="kpi-grid executive home-four" id="homeKpis"></div>
 
         <div class="grid two">
-          <article class="card"><div class="card-head"><div><h2>AT Real vs Año Anterior vs Ppto</h2><span>Comparativo monetario por semana</span></div></div><div id="atChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>AT Real vs Año Anterior vs Ppto</h2><span>Comparativo monetario por semana</span></div><label class="metric-toggle">Serie<select id="atMetric"><option value="all">Mostrar las tres</option><option value="ATR">AT R</option><option value="ATAA">AT AA</option><option value="ATPpto">AT ppto</option></select></label></div><div id="atChart" class="chart"></div><div id="atDetail" class="chart-detail hidden" aria-live="polite"></div></article>
           <article class="card"><div class="card-head"><div><h2 id="productivityTitle">Productividad operativa · TPLH</h2><span id="productivitySubtitle">Promedio semanal filtrado</span></div><label class="metric-toggle">Indicador<select id="productivityMetric"><option value="TPLH">TPLH</option><option value="ItemADT">Item/ADT</option></select></label></div><div id="productivityChart" class="chart"></div></article>
         </div>
 
         <div class="grid two">
-          <article class="card"><div class="card-head"><div><h2 id="weeklyTitle">Tendencia semanal · $</h2><span id="weeklySubtitle">Venta calculada por semana</span></div></div><div id="weeklyChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2 id="weeklyTitle">Tendencia semanal · $</h2><span id="weeklySubtitle">Venta calculada por semana</span></div><label class="metric-toggle">Cálculo<select id="weeklyMode"><option value="total">Total</option><option value="average">Promedio</option></select></label></div><div id="weeklyChart" class="chart"></div><div id="weeklyComparison" class="weekly-comparison" aria-live="polite"></div></article>
           <article class="card"><div class="card-head"><div><h2 id="itemTitle">Desempeño por Item · $</h2><span>Participación del portafolio</span></div></div><div id="itemChart" class="chart"></div></article>
         </div>
 
