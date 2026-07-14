@@ -1,28 +1,33 @@
 {
-  "version": "6.0.0",
+  "version": "7.0.0",
   "sourceFile": "Boost_CN.xlsx",
-  "generatedAt": "2026-07-11T08:29:33",
+  "generatedAt": "2026-07-14T18:14:11",
+  "updatedDate": "2026-07-13",
   "chunks": [
     "records-001.json",
     "records-002.json",
     "records-003.json",
-    "records-004.json"
+    "records-004.json",
+    "records-005.json"
   ],
-  "sourceRowsIncludingHeader": 15427,
-  "dataRows": 15426,
-  "loadedRows": 15426,
-  "validRows": 15426,
+  "sourceRowsIncludingHeader": 18152,
+  "dataRows": 18151,
+  "loadedRows": 18151,
+  "validRows": 18151,
   "discardedRows": 0,
+  "conditionRowsIncludingHeader": 20,
+  "conditionDataRows": 19,
+  "conditionDuplicateKeys": 0,
+  "conditionInvalidSales": 0,
+  "unmatchedProducts": 0,
   "baseATRowsIncludingHeader": 289,
-  "baseATDataRows": 288,
-  "itemADTRowsIncludingHeader": 217,
-  "itemADTDataRows": 216,
-  "instructionRowsIncludingHeader": 12,
-  "exceptionCount": 2,
-  "atDuplicateKeys": 0,
-  "itemADTDuplicateKeys": 0,
+  "baseATDataRows": 248,
+  "atDuplicateKeys": 40,
+  "itemADTRowsIncludingHeader": 289,
+  "itemADTDataRows": 288,
+  "exceptionCount": 40,
   "totals": {
-    "units": 35520.0,
-    "sales": 1397484.0
+    "units": 43583.0,
+    "sales": 1693395.0
   }
 }

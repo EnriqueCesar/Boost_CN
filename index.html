@@ -25,7 +25,7 @@
   <div class="main-wrap">
     <header class="topbar">
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Venta y productividad en una vista ejecutiva</p></div>
+      <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Venta y productividad en una vista ejecutiva</p><small id="updatedDate" class="updated-date">Actualizado: --/--</small></div>
       <div class="top-actions">
         <label class="global-metric"><span>Métrica visual</span><select id="globalMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label>
         <button id="clearAll" class="ghost">Limpiar filtros</button>
@@ -43,8 +43,8 @@
         <div class="kpi-grid executive home-four" id="homeKpis"></div>
 
         <div class="grid two">
-          <article class="card"><div class="card-head"><div><h2>Ticket Real vs Ticket Ppto</h2><span>Comparativo monetario por semana</span></div></div><div id="ticketChart" class="chart"></div></article>
-          <article class="card"><div class="card-head"><div><h2 id="productivityTitle">Productividad operativa · IPLH</h2><span id="productivitySubtitle">Promedio semanal filtrado</span></div><label class="metric-toggle">Indicador<select id="productivityMetric"><option value="IPLH">IPLH</option><option value="ItemADT">Item/ADT</option></select></label></div><div id="productivityChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2>AT Real vs Año Anterior vs Ppto</h2><span>Comparativo monetario por semana</span></div></div><div id="atChart" class="chart"></div></article>
+          <article class="card"><div class="card-head"><div><h2 id="productivityTitle">Productividad operativa · TPLH</h2><span id="productivitySubtitle">Promedio semanal filtrado</span></div><label class="metric-toggle">Indicador<select id="productivityMetric"><option value="TPLH">TPLH</option><option value="ItemADT">Item/ADT</option></select></label></div><div id="productivityChart" class="chart"></div></article>
         </div>
 
         <div class="grid two">

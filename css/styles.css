@@ -25,3 +25,5 @@
   .dm-card{margin-bottom:5px}
   .rankings tbody tr:nth-child(n+8){display:none}
 }
+
+.updated-date{display:block;color:#006241;font-weight:700;margin-top:3px}.line-aa{fill:none;stroke:#6f8f82;stroke-width:3;stroke-dasharray:7 5}

@@ -1,34 +1,44 @@
-BOOST CN v6 - AUDITORIA TECNICA
+BOOST CN v7 - AUDITORIA TECNICA
 
 Fuente: Boost_CN.xlsx
-Lectura: por nombre de pestaña y encabezado.
+Lectura: por nombre de pestaña y encabezado; sin posiciones fijas.
 
 Base_Boost_CN
-- Filas incluyendo encabezado: 15,427
-- Registros cargados: 15,426
-- Registros validos: 15,426
-- Registros descartados: 0
-- Unidades: 35,520
-- Venta calculada: $1,397,484.00 MXN
+- Filas incluyendo encabezado: 18,152
+- Registros cargados: 18,151
+- Fecha máxima válida: 13/07/2026
+- Unidades: 43,583
+- Venta calculada: $1,693,395.00 MXN
+
+Condicion
+- Filas incluyendo encabezado: 20
+- Productos: 19
+- Productos sin relación: 0
+- Duplicados normalizados: 0
+- Valores Venta no numéricos: 0
+- Cruce normalizado por espacios, mayúsculas y acentos.
+- Item y Precio Venta provienen exclusivamente de Condicion.
+- Venta Calculada = Unidad Vendida x Precio Venta.
+- No se duplican filas de Base_Boost_CN.
 
 Base_AT
-- Filas incluyendo encabezado: 289
-- Registros: 288
-- Duplicados por CeCo + DM + Año + Semana: 0
+- Filas fuente incluyendo encabezado: 289
+- Registros fuente: 288
+- Registros únicos publicados: 248
+- Llave principal: Ceco + Semana + Año
+- 40 llaves repetidas consolidadas conservando el registro más completo.
+- Campos publicados: AT R, AT AA y AT ppto.
+- Tienda y DM se conservan como validación auxiliar.
 
 Item_ADT
-- Filas incluyendo encabezado: 217
-- Registros: 216
-- Duplicados por CeCo + Semana + DM: 0
+- Filas incluyendo encabezado: 289
+- Registros: 288
+- TPLH actualizado desde el encabezado real.
 
 Validaciones funcionales
-- Cruces conservados con CeCo, Semana y DM normalizado.
-- Productividad con selector IPLH / Item/ADT y escala dinamica.
-- Comparativo por DayPart eliminado de Inicio.
-- Venta por Tienda eliminada de Inicio.
-- Crecimiento y desempeño por Tienda eliminado.
-- Venta por DM convertida a columnas verticales.
-- Top y Bottom muestran Ranking, Tienda, Venta y Participacion.
-- Exportacion PDF horizontal conservada.
-- Rutas relativas compatibles con GitHub Pages.
-- Manifest y Service Worker validos.
+- Anotación Actualizado: 13/07 generada desde la fecha máxima del Excel.
+- Filtros globales alimentan venta, Item, DM, DayPart, TPLH, Item/ADT y Base_AT.
+- Gráfica AT con tres series, moneda, semanas ordenadas, escala Y dinámica y tooltips.
+- JSON, JavaScript y rutas relativas validados.
+- Service Worker actualizado a v7 e incluye los cinco chunks de datos.
+- Compatible con GitHub Pages.
