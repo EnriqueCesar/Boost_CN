@@ -1,14 +1,17 @@
-BOOST CN v7 - AUDITORIA TECNICA
+BOOST CN v8.1 - AUDITORIA TECNICA
 
 Fuente: Boost_CN.xlsx
 Lectura: por nombre de pestaña y encabezado; sin posiciones fijas.
 
 Base_Boost_CN
-- Filas incluyendo encabezado: 18,152
-- Registros cargados: 18,151
-- Fecha máxima válida: 13/07/2026
-- Unidades: 43,583
-- Venta calculada: $1,693,395.00 MXN
+- Filas incluyendo encabezado: 21,687
+- Registros cargados: 21,686
+- Registros válidos: 21,686
+- Registros descartados: 0
+- Fecha máxima válida: 18/07/2026
+- Unidades: 54,306
+- Venta calculada: $2,084,396.00 MXN
+- Incremento frente a la versión anterior: 3,535 registros.
 
 Condicion
 - Filas incluyendo encabezado: 20
@@ -17,28 +20,23 @@ Condicion
 - Duplicados normalizados: 0
 - Valores Venta no numéricos: 0
 - Cruce normalizado por espacios, mayúsculas y acentos.
-- Item y Precio Venta provienen exclusivamente de Condicion.
-- Venta Calculada = Unidad Vendida x Precio Venta.
-- No se duplican filas de Base_Boost_CN.
+- Venta calculada = Unidad Vendida x Precio Venta.
 
 Base_AT
 - Filas fuente incluyendo encabezado: 289
-- Registros fuente: 288
 - Registros únicos publicados: 248
 - Llave principal: Ceco + Semana + Año
 - 40 llaves repetidas consolidadas conservando el registro más completo.
-- Campos publicados: AT R, AT AA y AT ppto.
-- Tienda y DM se conservan como validación auxiliar.
 
 Item_ADT
 - Filas incluyendo encabezado: 289
-- Registros: 288
-- TPLH actualizado desde el encabezado real.
+- Registros publicados: 288
+- TPLH e item/ADT validados desde sus encabezados.
 
-Validaciones funcionales
-- Anotación Actualizado: 13/07 generada desde la fecha máxima del Excel.
-- Filtros globales alimentan venta, Item, DM, DayPart, TPLH, Item/ADT y Base_AT.
-- Gráfica AT con tres series, moneda, semanas ordenadas, escala Y dinámica y tooltips.
-- JSON, JavaScript y rutas relativas validados.
-- Service Worker actualizado a v7 e incluye los cinco chunks de datos.
-- Compatible con GitHub Pages.
+Validaciones técnicas
+- Se generaron 6 archivos JSON de registros.
+- Manifest y resumen de auditoría sincronizados en versión 8.1.0.
+- Service Worker actualizado para precargar dinámicamente todos los chunks indicados por el manifest.
+- JSON y JavaScript validados sin errores de sintaxis.
+- Rutas relativas compatibles con GitHub Pages.
+- No se modificaron filtros, KPIs, cálculos, rankings, tablas, gráficas ni navegación.
