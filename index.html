@@ -13,18 +13,12 @@
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 <div class="app-shell">
-  <aside class="sidebar" id="sidebar">
-    <div class="brand"><img src="./assets/boost-cn.png" alt=""><div><strong>BOOST CN</strong><span>Centro Norte</span></div></div>
-    <nav aria-label="Navegación principal">
-      <button class="nav-btn active" data-view="inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg><span>Inicio</span></button>
-      <button class="nav-btn" data-view="franja"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg><span>Desempeño por Franja</span></button>
-    </nav>
-    <div class="sidebar-foot"><span id="syncStatus">Cargando datos…</span><small>PWA · GitHub Pages</small></div>
-  </aside>
-
   <div class="main-wrap">
     <header class="topbar">
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <div class="brand compact-brand"><img src="./assets/boost-cn.png" alt=""><div><strong>BOOST CN</strong><span>Centro Norte</span></div></div>
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a class="nav-btn active" href="#main" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h13V10M9.5 20v-6h5v6"/></svg><span>Inicio</span></a>
+      </nav>
       <div class="page-copy"><h1 id="pageTitle">Inicio</h1><p id="pageSubtitle">Venta y productividad en una vista ejecutiva</p><small id="updatedDate" class="updated-date">Actualizado: --/--</small></div>
       <div class="top-actions">
         <label class="global-metric"><span>Métrica visual</span><select id="globalMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label>
@@ -58,13 +52,17 @@
           <article class="card"><div class="card-head"><div><h2>Top 10 tiendas</h2><span>Mayor contribución</span></div></div><div class="ranking-filter-summary" id="topStoresFilters" aria-live="polite"></div><div class="table-wrap"><table><thead><tr><th>Ranking</th><th>Tienda</th><th class="num">Venta $</th><th class="num">Unidades</th></tr></thead><tbody id="topStores"></tbody></table></div></article>
           <article class="card"><div class="card-head"><div><h2>Bottom 10 tiendas</h2><span>Bloque de menor desempeño</span></div></div><div class="ranking-filter-summary" id="bottomStoresFilters" aria-live="polite"></div><div class="table-wrap"><table><thead><tr><th>Ranking</th><th>Tienda</th><th class="num">Venta $</th><th class="num">Unidades</th></tr></thead><tbody id="bottomStores"></tbody></table></div></article>
         </div>
+        <section class="home-detail" aria-labelledby="daypartTitle">
+          <div class="section-heading"><h2 id="daypartTitle">Detalle operativo por franja</h2><p>DayPart, Item y tienda dentro de la misma vista Inicio.</p></div>
+          <div class="kpi-grid" id="bandKpis"></div>
+          <article class="card"><div class="card-head"><div><h2>Desempeño por DayPart</h2><span>Serie por Item</span></div><label class="metric-toggle">Métrica<select id="bandMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="bandChart" class="chart tall"></div></article>
+          <article class="card"><div class="card-head"><div><h2>Tabla cruzada</h2><span>DM · Tienda · CeCo</span></div><button class="ghost" id="exportPivot">Exportar CSV</button></div><div class="table-wrap"><table id="pivotTable"></table></div></article>
+        </section>
       </section>
-
-      <section id="view-franja" class="view">
-        <div class="kpi-grid" id="bandKpis"></div>
-        <article class="card"><div class="card-head"><div><h2>Desempeño por DayPart</h2><span>Serie por Item</span></div><label class="metric-toggle">Métrica<select id="bandMetric"><option value="Venta">$</option><option value="UnidadVendida">Unidades</option></select></label></div><div id="bandChart" class="chart tall"></div></article>
-        <article class="card"><div class="card-head"><div><h2>Tabla cruzada</h2><span>DM · Tienda · CeCo</span></div><button class="ghost" id="exportPivot">Exportar CSV</button></div><div class="table-wrap"><table id="pivotTable"></table></div></article>
-      </section>
+      <footer class="site-footer">
+        <span id="syncStatus">Cargando datos…</span>
+        <small>Diseñado: Jorge Alcantar Aguiar &amp; Enrique César Flores</small>
+      </footer>
     </main>
   </div>
 </div>

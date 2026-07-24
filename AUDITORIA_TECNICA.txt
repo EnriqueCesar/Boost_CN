@@ -1,4 +1,4 @@
-BOOST CN v8.1 - AUDITORIA TECNICA
+BOOST CN v9.0 - AUDITORIA TECNICA
 
 Fuente: Boost_CN.xlsx
 Lectura: por nombre de pestaña y encabezado; sin posiciones fijas.
@@ -39,4 +39,8 @@ Validaciones técnicas
 - Service Worker actualizado para precargar dinámicamente todos los chunks indicados por el manifest.
 - JSON y JavaScript validados sin errores de sintaxis.
 - Rutas relativas compatibles con GitHub Pages.
-- No se modificaron filtros, KPIs, cálculos, rankings, tablas, gráficas ni navegación.
+- Se conservaron filtros, KPIs, cálculos, rankings, tablas y gráficas.
+- Navegación simplificada a Inicio e integrada al encabezado.
+- Desempeño por Franja integrado al final de Inicio sin retirar su funcionalidad.
+- Caché PWA incrementado a boost-cn-v9-0-20260724.
+- Leyenda de diseño agregada una sola vez en el pie de página.

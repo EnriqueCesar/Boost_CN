@@ -1,4 +1,4 @@
-const CACHE="boost-cn-v8-1-20260719";
+const CACHE="boost-cn-v9-0-20260724";
 const CORE=[
   "./",
   "./index.html",

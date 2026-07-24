@@ -50,8 +50,6 @@ function bind(){
  $("#slicerHost").addEventListener("click",e=>{const root=e.target.closest(".slicer");if(!root)return;const key=root.dataset.key;if(e.target.closest(".slicer-trigger")){const open=root.classList.toggle("open");root.querySelector(".slicer-trigger").setAttribute("aria-expanded",open);$$('.slicer').filter(x=>x!==root).forEach(x=>x.classList.remove('open'));return}const act=e.target.closest("[data-action]")?.dataset.action;if(act){if(act==="clear")delete state.filters[key];if(act==="all")state.filters[key]=availableValues(key);refreshSlicers();renderAll();return}if(e.target.matches('input[type="checkbox"]')){const vals=[...root.querySelectorAll('input[type="checkbox"]:checked')].map(x=>x.value);if(vals.length)state.filters[key]=vals;else delete state.filters[key];refreshSlicers();renderAll()}});
  $("#slicerHost").addEventListener("input",e=>{if(e.target.matches(".slicer-search")){const q=norm(e.target.value),root=e.target.closest(".slicer");root.querySelectorAll(".slicer-option").forEach(x=>x.hidden=!norm(x.textContent).includes(q));return}if(e.target.matches('[data-date]')){const root=e.target.closest(".slicer"),a=root.querySelector('[data-date="from"]').value,b=root.querySelector('[data-date="to"]').value;if(a||b)state.filters.Dia=[a,b];else delete state.filters.Dia;refreshSlicers();renderAll()}});
  document.addEventListener("click",e=>{if(!e.target.closest(".slicer"))$$('.slicer').forEach(x=>x.classList.remove('open'))});
- $$(".nav-btn").forEach(b=>b.addEventListener("click",()=>switchView(b.dataset.view)));
- $("#menuToggle").addEventListener("click",()=>$("#sidebar").classList.toggle("open"));
  $("#clearAll").addEventListener("click",()=>{state.filters={};refreshSlicers();renderAll();toast("Filtros limpiados")});
  $("#globalMetric").addEventListener("change",e=>{state.metric=e.target.value;$("#bandMetric").value=state.metric;persistSettings();renderAll()});
  $("#bandMetric").addEventListener("change",e=>{state.metric=e.target.value;$("#globalMetric").value=state.metric;persistSettings();renderAll()});
@@ -62,7 +60,6 @@ function bind(){
  window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();state.installPrompt=e;$("#installBtn").classList.remove("hidden")});
  $("#installBtn").addEventListener("click",async()=>{if(!state.installPrompt)return;state.installPrompt.prompt();await state.installPrompt.userChoice;state.installPrompt=null;$("#installBtn").classList.add("hidden")});
 }
-function switchView(view){state.currentView=view;$$('.nav-btn').forEach(x=>x.classList.toggle('active',x.dataset.view===view));$$('.view').forEach(x=>x.classList.toggle('active',x.id===`view-${view}`));$("#pageTitle").textContent=view==="inicio"?"Inicio":"Desempeño por Franja";$("#pageSubtitle").textContent=view==="inicio"?"Venta y productividad en una vista ejecutiva":"Análisis por DayPart, Item y tienda";$("#sidebar").classList.remove("open");renderAll()}
 function renderAll(){const rows=filteredRows();refreshSlicers();renderHome(rows);renderBand(rows)}
 function best(rows,key){const m=new Map();rows.forEach(r=>m.set(r[key],(m.get(r[key])||0)+(Number(r.Venta)||0)));return [...m].sort((a,b)=>b[1]-a[1])[0]||["Sin datos",0]}
 function commonKeys(rows){return new Set(rows.map(r=>`${String(r.CeCo||"")}|${r.Semana||""}|${r.Anio||""}`))}

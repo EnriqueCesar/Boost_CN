@@ -1,6 +1,8 @@
-# BOOST CN v8.1
+# BOOST CN v9.0
 
 PWA estática para GitHub Pages. Procesa `data/Boost_CN.xlsx` localmente mediante `tools/process_excel.py` y genera archivos JSON consumidos por el dashboard.
+
+La interfaz concentra el resumen ejecutivo y el detalle operativo por franja en una sola vista Inicio. La navegación mínima está integrada al encabezado y no utiliza panel lateral.
 
 ## Actualizar datos
 
